@@ -130,9 +130,41 @@ public class BinarySearchTree {
 				pp.right = child;
 			}
 		}
+		
+		
 	}
 	
+	public Node findMin() {
+		
+		if(tree == null) {
+			
+			return null;
+		}
+		
+		Node p = tree;
+		
+		while(p.left != null) {
+			p = p.left;
+		}
+		
+		return p;
+	}
 	
+	public Node findMax() {
+		
+		if(tree == null) {
+			return null;
+		}
+		
+		Node p = tree;
+		
+		while(p.right != null) {
+			
+			p = p.right;
+		}
+		
+		return p;
+	}
 	
 	
 	
